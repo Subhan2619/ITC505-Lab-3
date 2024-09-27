@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font Example with @font-face</title>
+    <style>
+        /* Define the custom font */
+        @font-face {
+            font-family: 'Satisfy Regular'; /* Name of the font */
+            src: url('/fonts/funfont.woff2') format('woff2'), /* Load from server */
+
+      }
+
+        /* Apply the custom font to specific elements */
+        body {
+            font-family: 'Satisfy', sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6347;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using a Custom Font with @font-face</h1>
+    <p>Welcome! This page uses a custom font called "FunFont". The font has been stored on the server and is being applied to this page using the <code>@font-face</code> rule in CSS. You should be able to see the text in a different style than usual!</p>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
