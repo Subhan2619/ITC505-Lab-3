@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Font Example with @font-face</title>
-    <style>
-        /* Define the new custom font */
-        @font-face {
-            font-family: 'UniqueFont'; /* New font name */
-            src: url('/fonts/uniquefont.woff2') format('woff2'), /* New font file location */
-                 url('/fonts/uniquefont.woff') format('woff'); /* Fallback format */
-        }
 
-        /* Apply the custom font to the body */
+    <!-- Link to the Lobster font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply the Lobster font from Google Fonts */
         body {
-            font-family: 'UniqueFont', sans-serif;
+            font-family: 'Lobster', sans-serif;
             background-color: #f0f0f0;
             color: #444;
             padding: 20px;
@@ -32,21 +29,22 @@
     </style>
 </head>
 <body>
-    <h1>Using a New Custom Font with @font-face</h1>
-    <p>Welcome! This page now uses a custom font called "UniqueFont". This font is stored on the server and loaded onto this page using the <code>@font-face</code> rule in CSS. You should notice a different style from the usual fonts.</p>
+    <h1>Using a Decorative Custom Font with Google Fonts</h1>
+    <p>Welcome! This page now uses a custom font called "Lobster", which is quite unusual and decorative. The font is loaded from Google Fonts using the <code>@import</code> rule in the HTML head section, making it easy to use.</p>
 
     <h2>How the Custom Font Works</h2>
-    <p>In this code, we’re using a custom font called 'UniqueFont'. This is just a name we’ve given it, and you can choose any name you like. The real magic happens when we tell the browser where to find the actual font files, which are stored on the server.</p>
+    <p>The font we’re using here is called **"Lobster"**. It's not the type of font you usually see on most web pages. Instead, it has a playful and curly style, which is why it stands out. If you're tired of the same old boring fonts, Lobster is a fun way to shake things up a bit!</p>
 
-    <p>We use two types of font files:</p>
+    <p>Instead of hosting the font ourselves, we’re using a service called **Google Fonts**. This service provides free access to a huge library of fonts like Lobster. Here’s what happens:</p>
+    
     <ul>
-        <li><strong>.woff2:</strong> This is a modern font file format that loads quickly and works well in most modern browsers.</li>
-        <li><strong>.woff:</strong> This is a backup format, just in case someone is using an older browser that doesn’t understand .woff2.</li>
+        <li><strong>Linking to Google Fonts:</strong> We add a special link in the <code>&lt;head&gt;</code> of our HTML file that tells the browser to go fetch the Lobster font from Google’s servers.</li>
+        <li><strong>Applying the Font:</strong> Once the browser grabs the font, we use <code>font-family: 'Lobster'</code> in our CSS to apply it to the text. This tells the browser to use Lobster for everything on the page instead of the default fonts.</li>
     </ul>
 
-    <p>After setting up the font, we apply it to the page by using <code>font-family: 'UniqueFont'</code>. This tells the browser, “Hey, use this custom font for the text.” If the font doesn’t load for some reason, the browser will fall back to a standard font like <code>sans-serif</code>, which ensures that the text is still readable.</p>
+    <p>Why is this helpful? By linking to Google Fonts, we don’t need to worry about storing or serving the font files ourselves. Google handles all of that for us, and it loads quickly and works on almost every browser. Plus, the font is loaded only when someone visits the page, so it doesn't take up extra space on our server.</p>
 
-    <p>In short, this process allows the page to have a unique look by using a special font that’s loaded from the server, instead of relying on the default fonts that come with most computers.</p>
+    <p>In short, we get to use a really unique font with very little effort, giving our page a playful, custom look.</p>
 
     <!-- Footer section with last modified date -->
     <footer>
