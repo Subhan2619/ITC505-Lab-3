@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Font Example with @font-face</title>
     <style>
-        /* Define the custom font */
+        /* Define the new custom font */
         @font-face {
-            font-family: 'Satisfy Regular'; /* Name of the font */
-            src: url('/fonts/funfont.woff2') format('woff2'), /* Load from server */
+            font-family: 'UniqueFont'; /* New font name */
+            src: url('/fonts/uniquefont.woff2') format('woff2'), /* New font file location */
+                 url('/fonts/uniquefont.woff') format('woff'); /* Fallback format */
+        }
 
-      }
-
-        /* Apply the custom font to specific elements */
+        /* Apply the custom font to the body */
         body {
-            font-family: 'Satisfy', sans-serif;
-            background-color: #e0e0e0;
-            color: #333;
+            font-family: 'UniqueFont', sans-serif;
+            background-color: #f0f0f0;
+            color: #444;
             padding: 20px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #ff6347;
+            font-size: 3rem;
+            color: #4682b4; /* Steel blue color */
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.5;
+            line-height: 1.7;
         }
     </style>
 </head>
 <body>
-    <h1>Using a Custom Font with @font-face</h1>
-    <p>Welcome! This page uses a custom font called "FunFont". The font has been stored on the server and is being applied to this page using the <code>@font-face</code> rule in CSS. You should be able to see the text in a different style than usual!</p>
+    <h1>Using a New Custom Font with @font-face</h1>
+    <p>Welcome! This page now uses a custom font called "UniqueFont". This font is stored on the server and loaded onto this page using the <code>@font-face</code> rule in CSS. You should notice a different style from the usual fonts.</p>
 
     <footer>
         <p>Last updated: 
